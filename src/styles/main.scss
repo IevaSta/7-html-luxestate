@@ -41,7 +41,7 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
-     }
+    }
 
     .header__menu-navigation {
         z-index: 1;
@@ -52,15 +52,15 @@ body {
         width: 100%;
         left: 0;
         top: 60px;
-        
+
         ul {
-        background-color: $primary;
-        display: flex;
-        flex-direction: column;
-        
+            background-color: $primary;
+            display: flex;
+            flex-direction: column;
+
             li {
-            border-bottom: 1px solid white;
-            padding: 15px 16px 14px;
+                border-bottom: 1px solid white;
+                padding: 15px 16px 14px;
             }
         }
     }
@@ -81,30 +81,31 @@ body {
     border: none;
     border-radius: $border-radius;
     background-color: $primary;
-    }
+}
 
 @media (min-width: $tablet) {
     .header__menu-burger {
         padding-left: 0;
     }
-    
-    .header__menu-burger svg{
+
+    .header__menu-burger svg {
         display: none;
     }
 
     .header__menu-navigation {
-        
+
         ul {
             display: flex;
-                    
+
             li {
                 padding: 14px 16px 14px;
+
                 &:first-of-type {
                     padding-left: 0;
                 }
             }
         }
-    }    
+    }
 }
 
 @media (min-width: $desktop) {
@@ -129,14 +130,17 @@ body {
 .input__wrapper {
     position: relative;
     @include f-c-c(flex-start, flex-start);
-            
 
     img {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 10px;
         transform: translateY(-50%);
         pointer-events: none;
+
+        @media (min-width: $desktop) {
+            margin-left: 18px;
+        }
     }
 
     input {
@@ -146,12 +150,11 @@ body {
         font-size: 15px;
         color: $tertiary;
 
-                    
         @media (min-width: $desktop) {
             width: 375px;
             padding: 30px 58px 29px;
-        }     
-        
+        }
+
     }
 
     button {
@@ -164,7 +167,7 @@ body {
 
         @media (min-width: $desktop) {
             padding: 30px 34px 29px;
-        }   
+        }
     }
 
 }
@@ -179,14 +182,14 @@ body {
     flex-direction: column;
     position: absolute;
     top: 0;
-   
+
     @media (min-width: $tablet) {
         @include f-c-c (flex-start, flex-start);
     }
 
-    @media (min-width: $desktop){
-      top: 20%;
-      left: 14px;
+    @media (min-width: $desktop) {
+        top: 20%;
+        left: 14px;
     }
 
     .search__main-heading {
@@ -200,20 +203,20 @@ body {
         @media (min-width: $tablet) {
             font-size: 42px;
             line-height: 60px;
-            
-        }                
+
+        }
 
         @media (min-width: $desktop) {
             width: 586px;
             font-size: 62px;
             line-height: 78px;
         }
-        
+
     }
 }
 
 
-.search__b-box{
+.search__b-box {
     @include f-c-c(flex-end, flex-end);
     background: $secondary;
     height: 300px;
@@ -251,7 +254,7 @@ body {
             font-size: $text-size;
             font-weight: 600;
 
-             &:first-of-type{
+            &:first-of-type {
                 margin-bottom: 12px;
             }
 
@@ -263,14 +266,14 @@ body {
             @media (min-width: $desktop) {
                 font-size: 18px;
 
-                &:first-of-type{
+                &:first-of-type {
                     margin-right: 60px;
                 }
             }
 
-          img {
-              margin-right: 16px;
-          }
+            img {
+                margin-right: 16px;
+            }
 
         }
     }
@@ -303,14 +306,12 @@ body {
     flex-direction: column;
     padding: 50px 18px;
 
-    @media (min-width: $tablet){
-    
-    }
+    @media (min-width: $tablet) {}
 
-    @media (min-width: $desktop){
+    @media (min-width: $desktop) {
         flex-direction: row;
         padding: 100px 18px;
-        }
+    }
 
 }
 
@@ -323,7 +324,7 @@ body {
     }
 
     h2 {
-        
+
         font-size: 20px;
         letter-spacing: -1px;
         line-height: 30px;
@@ -363,8 +364,8 @@ body {
     @media (min-width: $desktop) {
         @include f-c-c (flex-end, flex-end);
     }
-         
-    
+
+
     div {
         @include f-c-c;
         flex-direction: column;
@@ -377,7 +378,7 @@ body {
             margin-left: 0;
         }
 
-        &:nth-child(3){
+        &:nth-child(3) {
             margin-left: 0;
         }
 
@@ -385,15 +386,16 @@ body {
         font-weight: 600;
 
         @media (min-width: $tablet) {
-            &:nth-child(3){
+            &:nth-child(3) {
                 margin-left: 30px;
             }
         }
-        
+
         @media (min-width: $desktop) {
             &:first-of-type {
                 margin-left: 30px;
             }
+
             height: 201px;
             width: 201px;
         }
@@ -403,31 +405,30 @@ body {
             letter-spacing: -1px;
             line-height: 50px;
             color: $primary;
-            
+
         }
-    
+
         span {
             font-size: 14px;
             line-height: 50px;
-            color: $text-color;            
+            color: $text-color;
         }
     }
 
 }
 
-//___________THIS PART IS NOT FINISHED - COME BACK LATER_____________________
-
 //___________section statistics end_____________________
 
 //___________section appartments start___________
 
-.appartments__background {
+.appartments__wrapper {
     background: $quaternary;
-    padding: 64px 0 84px;
+    padding: 64px 16px 84px;
 }
 
-.appartments{
-    h2{
+.appartments {
+
+    h2 {
         font-size: 40px;
         letter-spacing: -1px;
         line-height: 50px;
@@ -437,78 +438,134 @@ body {
         width: 50%;
     }
 
-    .appartments__cards{
+    .appartments__cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px 34px;
+        margin-bottom: 60px;
+
+        @media (min-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
 
         .appartments__card {
-            img {
+            filter: drop-shadow(0px 2px 12px rgba(23, 44, 51, 0.15));
+            transition: transform 300ms linear;
 
+            &:hover {
+                transform: scale(1.02);
             }
 
-            .appartments__card-footer {
-                h5 {
+            .appartments__card-image {
+                width: 100%;
+                height: 381px;
+                background: $secondary;
+            }
 
+            &-footer {
+                background: $white;
+                padding: 24px;
+
+                h5 {
+                    font-size: 15px;
+                    color: $text-color;
+                    font-weight: 600;
+                    margin-bottom: 24px;
                 }
 
-                .appartments__card-footer-info{
-                    small{
+                &-info {
+                    @include f-c-c(space-between, center);
+
+                    small {
+                        color: $primary;
+                        font-weight: 600;
+                        font-size: 18px;
 
                     }
 
-                    ul{
-                        li{
-                            img{
+                    ul {
+                        @include f-c-c(flex-start, center);
 
-                            }
+                        li {
+                            @include f-c-c(flex-start, center);
 
-                            span{
-
+                            span {
+                                font-size: $text-size;
+                                color: $tertiary;
                             }
                         }
                     }
                 }
-
             }
-            
-
 
         }
-
     }
+}
 
-.appartments__search{
+.appartments__search {
+    text-transform: capitalize;
+    @include f-c-c(flex-start, center);
+    flex-wrap: wrap;
+
+
     .input__wrapper {
-       margin-right: 40px;
+        margin-right: 40px;
+        margin-bottom: 24px;
 
-       input {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-       }
-            
-        img {
-            margin-left: 18px;
+        @media (min-width: $tablet) {
+            margin-bottom: 0;
         }
-        
+
+        @media (min-width: $desktop) {
+            margin-bottom: 0;
+        }
+
+        input {
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+
+        img {
+            margin-left: 0px;
+
+            @media (min-width: $tablet) {
+                margin-left: 18px;
+            }
+
+            @media (min-width: $desktop) {
+                margin-left: 18px;
+            }
+        }
+
     }
 
     .appartments__search-all {
         font-size: 15px;
         color: $text-color;
-        font-weight: 400;
-        padding: 18px 18px 17px;
+        font-weight: 500;
+        padding: 18px 32px 17px;
         border-radius: $border-radius;
-        
+        background: $white;
+        margin-bottom: 24px;
+        transition: background-color 300ms linear;
+
+        &:hover {
+            background-color: $primary;
+        }
+
+        @media (min-width: $tablet) {
+            padding: 18px 34px 17px;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $desktop) {
+            padding: 30px 38px 28px;
+            margin-bottom: 0;
+        }
     }
-
-    @media (min-width: $tablet) {
-        padding: 18px 34px 17px;
-    }
-
-    @media (min-width: $desktop) {
-        padding: 30px 48px 28px;
-    }
-
-
-}
-
-
 }
